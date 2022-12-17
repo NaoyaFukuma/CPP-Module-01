@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 22:39:00 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/12/17 23:12:17 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/12/18 01:12:21 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ HumanB::~HumanB()
 {
 }
 
-void HumanB::setWeapon(Weapon *weapon)
+void HumanB::setWeapon(Weapon &weapon)
 {
-	_weapon = weapon;
+	_weapon = &weapon;
 }
 
 void HumanB::attack(void) const

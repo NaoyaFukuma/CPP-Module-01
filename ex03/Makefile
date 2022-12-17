@@ -1,4 +1,4 @@
-NAME = Account
+NAME = Attack
 
 
 CXX = c++
