@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/17 22:29:28 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/12/17 22:38:09 by nfukuma          ###   ########.fr       */
+/*   Created: 2022/12/17 22:39:00 by nfukuma           #+#    #+#             */
+/*   Updated: 2022/12/17 23:12:17 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-HumanA::HumanA()
+HumanB::HumanB()
 {
 }
 
-HumanA::HumanA(std::string name, Weapon &weapon)
+HumanB::HumanB(std::string name, Weapon *weapon)
 	: _name(name), _weapon(weapon)
 {
 }
 
-HumanA::~HumanA()
+HumanB::~HumanB()
 {
 }
 
-void HumanA::attack(void) const
+void HumanB::setWeapon(Weapon *weapon)
 {
-	std::cout << _name << " attacks with their " << _weapon.getType() << std::endl;
+	_weapon = weapon;
+}
+
+void HumanB::attack(void) const
+{
+	if (_weapon != NULL && _weapon->getType() != "")
+	{
+		std::cout << _name << " attacks with their " << _weapon->getType() << std::endl;
+	}
+	else
+	{
+		std::cout << _name << " doesn't have a weapon to attack." << std::endl;
+	}
 }

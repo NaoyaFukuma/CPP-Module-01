@@ -6,7 +6,7 @@
 /*   By: nfukuma <nfukuma@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 22:17:03 by nfukuma           #+#    #+#             */
-/*   Updated: 2022/12/17 22:28:49 by nfukuma          ###   ########.fr       */
+/*   Updated: 2022/12/17 22:35:59 by nfukuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Weapon
 {
   private:
-	std::string type;
+	std::string _type;
 
   public:
 	Weapon();
