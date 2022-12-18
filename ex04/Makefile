@@ -1,11 +1,11 @@
-NAME = Account
+NAME = replace
 
 
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -MMD -MP
 CPPFLAGS = -Iincludes
 
-SRCS = tests.cpp Account.cpp
+SRCS = main.cpp rep.cpp
 VPATH = srcs
 
 OBJSDIR = objs
