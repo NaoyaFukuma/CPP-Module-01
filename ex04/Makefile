@@ -1,11 +1,12 @@
-NAME = replace
+NAME = harl
+
 
 
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -MMD -MP
 CPPFLAGS = -Iincludes
 
-SRCS = main.cpp rep.cpp
+SRCS = main.cpp Harl.cpp
 VPATH = srcs
 
 OBJSDIR = objs

@@ -1,11 +1,11 @@
-NAME = Account
+NAME = ./Harl_2.0
 
 
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -MMD -MP
 CPPFLAGS = -Iincludes
 
-SRCS = tests.cpp Account.cpp
+SRCS = main.cpp Harl.cpp
 VPATH = srcs
 
 OBJSDIR = objs
@@ -24,6 +24,9 @@ $(OBJSDIR)/%.o: %.cpp
 
 objs:
 	mkdir -p objs
+
+debug: $(NAME)
+	leaks -atExit -- ./$(NAME)
 
 clean:
 	$(RM) -rf $(OBJSDIR)

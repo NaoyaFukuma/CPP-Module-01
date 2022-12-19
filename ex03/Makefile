@@ -25,6 +25,9 @@ $(OBJSDIR)/%.o: %.cpp
 objs:
 	mkdir -p objs
 
+debug: $(NAME)
+	leaks -atExit -- ./$(NAME)
+
 clean:
 	$(RM) -rf $(OBJSDIR)
 
